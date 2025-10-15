@@ -1,6 +1,7 @@
 package com.aluracursos.radiomafe.main;
 
 import com.aluracursos.radiomafe.modelos.Cancion;
+import com.aluracursos.radiomafe.modelos.MisFavoritos;
 import com.aluracursos.radiomafe.modelos.Podcast;
 
 public class Main {
@@ -21,8 +22,8 @@ public class Main {
             miCancion.reproduce();
         }
 
-        System.out.println("Total de reproducciones: " + miCancion.getTotalDeReproduciones());
-        System.out.println("Total de me gusta: " + miCancion.getTotalDeMeGusta());
+        System.out.println("Canción reproducida: " + miCancion.getTotalDeReproduciones() + " veces");
+        System.out.println("Canción con: " + miCancion.getTotalDeMeGusta() + " me gusta");
 
         for (int i = 0; i < 2500; i++) {
             miPodcast.meGusta();
@@ -32,7 +33,11 @@ public class Main {
             miPodcast.reproduce();
         }
 
-        System.out.println("Total de reproducciones: " + miPodcast.getTotalDeReproduciones());
-        System.out.println("Total de me gusta: " + miPodcast.getTotalDeMeGusta());
+        System.out.println("Podcast reproducido: " + miPodcast.getTotalDeReproduciones() + " veces");
+        System.out.println("Podcast tiene: " + miPodcast.getTotalDeMeGusta() + " me gusta");
+
+        MisFavoritos favoritos = new MisFavoritos();
+        favoritos.incluye(miPodcast);
+        favoritos.incluye(miCancion);
     }
 }
