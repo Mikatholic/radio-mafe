@@ -2,7 +2,7 @@ package com.aluracursos.radiomafe.modelos;
 
 public class Audio {
     private String titulo;
-    private int totalDeReproducciones;
+    private int totalDeReproduciones;
     private int totalDeMeGusta;
     private int clasificacion;
 
@@ -11,7 +11,7 @@ public class Audio {
     }
 
     public void reproduce(){
-        this.totalDeReproducciones++;
+        this.totalDeReproduciones++;
     }
 
     public String getTitulo() {
@@ -22,12 +22,12 @@ public class Audio {
         this.titulo = titulo;
     }
 
-    public int getTotalDeReproducciones() {
-        return totalDeReproducciones;
+    public int getTotalDeReproduciones() {
+        return totalDeReproduciones;
     }
 
-    public void setTotalDeReproducciones(int totalDeReproducciones) {
-        this.totalDeReproducciones = totalDeReproducciones;
+    public void setTotalDeReproduciones(int totalDeReproduciones) {
+        this.totalDeReproduciones = totalDeReproduciones;
     }
 
     public int getTotalDeMeGusta() {
